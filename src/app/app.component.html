@@ -1,11 +1,25 @@
-<h1>Base</h1>
+<!-- Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="#" target="_blank" class="positronx">Google Drive File Uploader</a></div>
+  <ng-template class="nav-tool-items" #login>
+    <button mat-raised-button color="primary" (click)="authService.googleSignIn()">Sign In With
+      Google</button>
+  </ng-template>
+  <span class="nav-tool-items" *ngIf="authService.user$ | async as user;else login">
+    <mat-label mat-button>{{user.displayName}}</mat-label>
+    <button mat-button (click)="authService.signOut()">Sign Out</button>
+  </span>
+</mat-toolbar>
 
-<div *ngIf="authService.user$ | async as user;">
+
+<!-- <div *ngIf="authService.user$ | async as user;">
   {{user | json}}
-</div>
+
+  <button mat-button (click)="authService.signOut()">Sign Out</button>
+</div> -->
 
 <!-- <ng-template #login> -->
-  <button class="button" (click)="authService.googleSignIn()">Sign In With Google</button>
+<!-- <button mat-raised-button color="primary" (click)="authService.googleSignIn()">Sign In With Google</button> -->
 <!-- </ng-template> -->
 
 <router-outlet></router-outlet>
