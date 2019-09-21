@@ -6,20 +6,10 @@
       Google</button>
   </ng-template>
   <span class="nav-tool-items" *ngIf="authService.user$ | async as user;else login">
-    <mat-label mat-button>{{user.displayName}}</mat-label>
+    <mat-label color="primary" class="p-5">{{user.displayName}}</mat-label>
     <button mat-button (click)="authService.signOut()">Sign Out</button>
   </span>
 </mat-toolbar>
 
-
-<!-- <div *ngIf="authService.user$ | async as user;">
-  {{user | json}}
-
-  <button mat-button (click)="authService.signOut()">Sign Out</button>
-</div> -->
-
-<!-- <ng-template #login> -->
-<!-- <button mat-raised-button color="primary" (click)="authService.googleSignIn()">Sign In With Google</button> -->
-<!-- </ng-template> -->
 
 <router-outlet></router-outlet>
