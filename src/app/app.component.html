@@ -2,8 +2,11 @@
 <mat-toolbar color="primary" class="app-header">
   <div><a href="#" target="_blank" class="positronx">Google Drive File Uploader</a></div>
   <ng-template class="nav-tool-items" #login>
-    <button mat-raised-button color="primary" (click)="authService.googleSignIn()">Sign In With
-      Google</button>
+    <button mat-raised-button (click)="authService.googleSignIn()">Sign In With
+      Google
+      <img width="20px" alt="Google &quot;G&quot; Logo"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+    </button>
   </ng-template>
   <span class="nav-tool-items" *ngIf="authService.user$ | async as user;else login">
     <mat-label color="primary" class="p-5">{{user.displayName}}</mat-label>
