@@ -33,9 +33,10 @@ import {
   MatMenuModule
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FileUploadComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
