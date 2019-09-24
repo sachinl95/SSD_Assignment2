@@ -5,10 +5,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Instructions
 
-Download and install nodejs
-Install angular CLI using npm install -g @angular/cli
-Clone and run npm install on the project
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+1. Download and install nodejs
+2. Install angular CLI using npm install -g @angular/cli
+3. Clone and run npm install on the project
+4. Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Further help
 
