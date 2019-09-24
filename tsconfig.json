@@ -24,6 +24,7 @@
     "strictInjectionParameters": true
   },
   "types": [
-    "gapi"
+    "gapi",
+    "gapi.auth2"
   ]
 }

@@ -1,7 +1,14 @@
 <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
   <div class="h-100 row align-items-center">
-    <div class="col">
-      <button mat-stroked-button color="warn">Select a file to upload</button>
+    <div class="row">
+      <div class="col-md-6">
+        <input type="file" (change)="onFileSelected($event)">
+      </div>
+      <div class="col-md-6">
+        <button type="button" mat-raised-button color="primary" [disabled]="!selectedFile" (click)="onUpload()">Upload
+          to
+          drive</button>
+      </div>
     </div>
   </div>
 </div>
